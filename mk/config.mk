@@ -1,0 +1,13 @@
+ARCH ?= x86_64
+PLATFORM ?= uefi
+
+ifeq ($(CURDIR),$(PROJECT_DIR))
+BUILD_DIR := $(PROJECT_DIR)/out
+else
+BUILD_DIR ?= $(PROJECT_DIR)/out
+endif
+
+DIST_DIR := $(BUILD_DIR)/dist
+OBJ_DIR := $(BUILD_DIR)/obj
+
+GENERIC_COMPILER_FLAGS := -std=c++20
